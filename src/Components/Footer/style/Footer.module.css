@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.footer{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.background{
+    max-width: 1600px;
+    width: 100%;
+    height: 471px;
+    background-color: #141414;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    height: 391px;
+}
+
+.logo {
+    width: 290px;
+    height: 80px;
+}
+
+.text_section{
+    margin-top: 30px;
+    color:white;
+    width: 500px;
+}
+
+.main_txt {
+    font-size: 16px;
+}
+
+.copyright_mark{
+    margin-top: 15px;
+    font-size: 14px;
+    opacity: 70%;
+}
+
+.bottom_txt{
+    margin-top: 80px;
+    display: flex;
+    font-size: 14px;
+    gap: 40px;
+}
+
+.right_side {
+    color: white;
+    max-width: 620px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form {
+    background-color: #141414;
+    width: 620px;
+    padding: 20px;
+    height: 267px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.formGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.inputContainer {
+    flex: 1;
+    margin-right: 16px;
+}
+
+.inputContainer:last-child {
+    margin-right: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+    color: #ccc;
+}
+
+.submitBtn {
+    width: 100%;
+    padding: 15px;
+    background-color: #fff;
+    color: #141414;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.checkboxContainer {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.checkboxContainer input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.checkboxContainer label {
+    font-size: 14px;
+    color: #ccc;
+}
