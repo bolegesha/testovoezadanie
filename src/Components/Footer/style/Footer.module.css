@@ -4,9 +4,11 @@
 }
 
 .footer{
-    margin-top: 50px;
     display: flex;
     justify-content: center;
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .background{
@@ -136,3 +138,93 @@ input[type="email"]::placeholder {
     font-size: 14px;
     color: #ccc;
 }
+
+@media (max-width: 768px) {
+    .footer {
+        margin-top: 150px;
+        width: 100%;
+    }
+
+    .background {
+        width: 100%;
+        height: auto;
+        padding-top: 300px;
+        padding-bottom: 20px;
+    }
+
+    .container {
+        margin-top: 200px;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .logo{
+        margin-top: 20px;
+        width: 250px;
+        margin-left: 10px;
+    }
+
+    .text_section{
+        text-align: left;
+        max-width: 660px;
+        padding-left: 5px;
+        width: 100%;
+    }
+
+    .copyright_mark{
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .bottom_txt{
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        padding: 5px;
+    }
+
+    .form {
+        height: auto;
+        width: 100%;
+        padding: 20px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .formGroup {
+        flex-direction: column;
+        margin-bottom: 16px;
+    }
+
+    .inputContainer {
+        width: 100%;
+        /*margin-right: 0;*/
+        margin-bottom: 16px;
+    }
+
+    .submitBtn {
+        width: 100%;
+        padding: 15px;
+        background-color: #fff;
+        color: #141414;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .checkboxContainer {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .checkboxContainer label {
+        margin-top: 8px;
+        font-size: 14px;
+        color: #ccc;
+    }
+}
+

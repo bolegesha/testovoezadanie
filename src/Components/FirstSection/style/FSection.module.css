@@ -6,6 +6,9 @@
 .container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    max-width: 1600px;
+    width: 100%;
 }
 
 .background {
@@ -20,50 +23,102 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-.text_block{
-    padding-top: 100px;
+.text_block {
+    padding-top: 200px;
     width: 1280px;
+    position: relative;
+    text-align: left;
 }
 
-.head_txt{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 580px;
+.head_txt {
     font-size: 44px;
     font-weight: 700;
     color: white;
 }
 
-.sec_txt{
+.sec_txt {
     margin-top: 32px;
     width: 540px;
     font-size: 16px;
     color: white;
+    text-align: left;
 }
 
-.btn_section{
+.btn_section {
     display: flex;
     justify-content: center;
-
+    position: absolute; /* Убедимся, что кнопка будет отображаться внизу изображения */
+    bottom: 20px;
+    width: 100%;
 }
 
-.btn{
-    margin-top: 200px;
-    width: 1280px;
+.btn {
     background-color: #141414;
     cursor: pointer;
 }
 
 .btn_txt {
-    width: 1280px;
     height: 61px;
-    color:white;
+    width: 1280px;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 90%;
+        margin-bottom: 280px;
+    }
+
+    .background {
+        height: 328px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .text_block {
+        margin-top: 150px;
+        width: 100%;
+        text-align: left;
+        position: static;
+    }
+
+    .head_txt {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: black;
+    }
+
+    .sec_txt {
+        width: 100%;
+        font-size: 14px;
+        margin-top: 0;
+        color: black;
+    }
+
+    .btn_section {
+        margin: 30px;
+        padding: 0;
+        position: static;
+    }
+
+    .btn {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .btn_txt {
+
+        width: 100%;
+    }
 }

@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -6,10 +6,12 @@
 .navbar {
   background-color: white;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
-  max-width: 1920px;
   width: 100%;
   height: 100px;
   display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 
 .container {
@@ -18,7 +20,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
+}
+
+.burgerMenu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+}
+
+.burgerMenu img {
+  width: 30px;
+  height: 30px;
 }
 
 .logo {
@@ -29,11 +44,11 @@
   height: 43px;
 }
 
-
 .nav_links {
   width: 749px;
   display: flex;
   gap: 24px;
+  transition: transform 0.3s ease;
 }
 
 .nav_links a {
@@ -68,16 +83,18 @@
   text-decoration: underline;
 }
 
-.contact_icon_wtsp{
+.contact_icon_wtsp {
   align-items: center;
   display: flex;
   width: 43px;
   height: 43px;
   background: rgba(0, 0, 0, 0.03);
   justify-content: center;
+  position: relative;
+  right: auto;
 }
 
-.contact_icon_tlgrm{
+.contact_icon_tlgrm {
   align-items: center;
   justify-content: center;
   display: flex;
@@ -96,7 +113,6 @@
   transform: scale(1.1);
 }
 
-
 .phone_number {
   display: flex;
   align-items: center;
@@ -107,4 +123,140 @@
   color: #333;
   font-weight: 600;
   font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .burgerMenu {
+    display: flex;
+    width: 28px;
+    height: 28px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 20px; /* Позиционируем бургер-меню слева */
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 115px;
+    width: 100%;
+    height: 32px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .contact_icon_wtsp {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 20px;
+  }
+
+  .nav_links, .about_us, .contact_icon_tlgrm, .phone_number {
+    display: none;
+  }
+
+  .menuOpen {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .modalNav{
+    display: block;
+    font-size: 24px;
+  }
+
+  .menuOpen .nav_links,
+  .menuOpen .about_us{
+    display: block;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 24px;
+  }
+
+  .menuOpen .contact_icon_tlgrm,
+  .menuOpen .contact_icon_wtsp,
+  .menuOpen .phone_number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menuOpen .modalNav li{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    padding-left: 10px;
+    margin-top: 10px;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .menuOpen .modalNav li:hover{
+    background-color: black;
+    color: white;
+  }
+
+  .menuOpen .nav_links a {
+    font-size: 20px;
+    color: black;
+    padding: 10px 0;
+    text-decoration: none;
+  }
+
+  .menuOpen .nav_links a:hover {
+    text-decoration: underline;
+  }
+
+  .menuOpen .phone_number {
+    display: flex;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.03);
+    color: black;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .menuOpen .contact_info {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .menuOpen .contact_icon_wtsp{
+    position: static;
+    width: 43px;
+    height: 43px;
+  }
+
 }
